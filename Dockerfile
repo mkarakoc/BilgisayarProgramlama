@@ -11,11 +11,14 @@ ADD jupyter_notebook_config.py /home/main/.jupyter/jupyter_notebook_config.py
 ADD jupyter.sh /home/main/jupyter.sh
 RUN chmod +x jupyter.sh
 
-ADD woods_saxon_potential /home/main/woods_saxon_potential
-RUN chown -R main:main /home/main/woods_saxon_potential
+ADD dosyalar /home/main/dosyalar
+RUN chown -R main:main /home/main/dosyalar
 
-ADD examples    /home/main/examples
-RUN chown -R main:main /home/main/examples
+ADD sekiller /home/main/sekiller
+RUN chown -R main:main /home/main/sekiller
+
+ADD htmls /home/main/htmls
+RUN chown -R main:main /home/main/htmls
 
 # main user
 USER main
